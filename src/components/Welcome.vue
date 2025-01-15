@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div style="margin: 5em;">
     <h1>Welcome</h1>
-    <table border="1">
+    <table border="1" >
       <tr>
     <td>Id</td>
     <td>Title</td>
