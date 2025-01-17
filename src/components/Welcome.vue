@@ -1,6 +1,7 @@
 <template>
   <div style="margin: 5em;">
     <h1>Welcome</h1>
+    <h2>{{ NomEtuidiant }}</h2>
 
     <table border="1" >
       <thead>
@@ -22,6 +23,11 @@ import axios from 'axios';
 
 export default {
   name: 'Welcome',
+  computed : {
+    NomEtuidiant(){
+      return this.$store.state.A.nom +" "+ this.$store.state.A.prenom
+    }
+  },
   data(){
     return {list:undefined}
   },

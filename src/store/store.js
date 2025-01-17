@@ -1,6 +1,25 @@
 
 import { createStore } from 'vuex';
 
+const ModuleAff = {
+  state:{
+    nom:'sami',
+    prenom: 'Said'
+  },
+  getters:{},
+  mutations:{},
+  actions:{}
+}
+const ModuleUti = {
+  state:{
+    nom:'salem',
+    prenom: 'ben salah'
+  },
+  getters:{},
+  mutations:{},
+  actions:{}
+}
+
 
 const store = createStore({
   state: {
@@ -37,7 +56,11 @@ const store = createStore({
           commit('dec');
         },2000)
       }
-    }
+    },
+   modules:{
+    A:ModuleAff,
+    B:ModuleUti
+   }
   }
 )
 
