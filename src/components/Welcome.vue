@@ -1,7 +1,7 @@
 <template>
   <div style="margin: 5em;">
     <h1>Welcome</h1>
-    <table border="1" >
+    <!-- <table border="1" >
       <tr>
     <td>Id</td>
     <td>Title</td>
@@ -10,7 +10,7 @@
       <td>{{i.id}}</td>
       <td>{{i.title}}</td>
     </tr>
-  </table>
+  </table> -->
   </div>
 </template>
 

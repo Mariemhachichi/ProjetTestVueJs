@@ -1,37 +1,43 @@
 <template>
   <div>
     <h1>This is an about page</h1>
-    <h1>{{ calc }}</h1>
-    <h1>{{ Nom }}</h1>
+    <h1>{{ count }}</h1>
+   
     <button v-on:click="Decrmnt">--</button>
     <button v-on:click="Increment">++</button>
     <table border="2">
-      <tr>
-        <td>Nom</td>
-        <td>Age</td>
-      </tr>
-      <tr v-for="i in list" :key='i.age'>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Nom</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+      <tbody>
+      <tr v-for="i in Etudiants" :key='i.id'>
+        <td>{{ i.id }}</td>
         <td>{{ i.name }}</td>
         <td>{{ i.age }}</td>
       </tr>
+    </tbody>
     </table>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
+
+
 export default {
   name: 'AboutView',
-  computed: {
-    calc() {
-      return this.$store.state.count;
-    },
-    Nom(){
-      return this.$store.state.nom
-    },
-    list(){
-        return this.$store.state.Etudiants
-    }
-  },
+  computed: mapState([
+    'count',
+    'nom',
+    'Etudiants'
+  ]),
+
+
   methods: {
     Decrmnt(){
       return this.$store.state.count--
