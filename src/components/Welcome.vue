@@ -1,16 +1,19 @@
 <template>
   <div style="margin: 5em;">
     <h1>Welcome</h1>
-    <!-- <table border="1" >
+
+    <table border="1" >
+      <thead>
       <tr>
-    <td>Id</td>
-    <td>Title</td>
-  </tr>
+          <th>Id</th>
+          <th>Title</th>
+      </tr>
+    </thead>
     <tr v-for="i in list" :key="i.id"> 
       <td>{{i.id}}</td>
       <td>{{i.title}}</td>
     </tr>
-  </table> -->
+  </table>
   </div>
 </template>
 

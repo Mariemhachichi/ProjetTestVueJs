@@ -40,10 +40,10 @@ export default {
 
   methods: {
     Decrmnt(){
-      return this.$store.state.count--
+      return this.$store.commit("dec",2)
     },
     Increment(){
-      return this.$store.state.count++
+      return this.$store.commit("inc",4)
 
     }
   }
