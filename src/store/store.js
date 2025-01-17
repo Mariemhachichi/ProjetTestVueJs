@@ -4,7 +4,7 @@ import { createStore } from 'vuex';
 
 const store = createStore({
   state: {
-      count: 5,
+      count: 0,
       nom: 'ahmed',
       Etudiants : [
         {id:1, name:'sami',age:20},
@@ -19,15 +19,27 @@ const store = createStore({
         }
     },
     mutations:{
-      inc(state,n){
-        return state.count=state.count+n
+      inc(state){
+        return state.count++
       },
-      dec(state,n){
-        return state.count=state.count-n
+      dec(state){
+        return state.count--
+    }
+  },
+    actions:{
+      Aincr({commit}){
+       setTimeout(()=>{
+        commit('inc');
+       },2000);
+      },
+      Adec({commit}){
+        setTimeout(()=>{
+          commit('dec');
+        },2000)
+      }
     }
   }
-  }
-);
+)
 
 
 export default store;

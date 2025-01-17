@@ -40,10 +40,10 @@ export default {
 
   methods: {
     Decrmnt(){
-      return this.$store.commit("dec",2)
+      return this.$store.dispatch('Adec')
     },
     Increment(){
-      return this.$store.commit("inc",4)
+      return this.$store.dispatch('Aincr')
 
     }
   }
